@@ -11,6 +11,90 @@ html{
     scroll-behavior: smooth;
 }
 
+/* 
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 3px solid crimson;
+    border-radius: 50%;
+    position: absolute;
+
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnimation .5s alternate infinite;
+}
+
+.cursor::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 8px solid gray;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+}
+
+@keyframes cursorAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+} */
+
+
+#icon {
+    width: 50px;
+    cursor: pointer;
+}
+.music{
+    position: fixed;
+    display: flex;
+    top: 100px;
+    right: 30px;
+    /* position: absolute; */
+    /* z-index: 9999; */
+    cursor: pointer;
+    /* pointer-events: none; */
+    animation: musicAnim .5s alternate infinite;
+}
+/* .music.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+
+/* 
+.music::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid crimson;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+} */
+
+@keyframes musicAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+} 
+
+
+
+
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -211,8 +295,8 @@ section .title::after{
 }
 .scroll-up-btn{
     position: fixed;
-    height: 45px;
-    width: 42px;
+    height: 40px;
+    width: 35px;
     background: crimson;
     right: 30px;
     bottom: 10px;
@@ -221,7 +305,7 @@ section .title::after{
     color: #fff;
     z-index: 9999;
     font-size: 30px;
-    border-radius: 6px;
+    border-radius: 20px;
     border-bottom-width: 2px;
     cursor: pointer;
     opacity: 0;
@@ -234,7 +318,7 @@ section .title::after{
     pointer-events: auto;
 }
 .scroll-up-btn:hover{
-    filter: brightness(90%);
+    filter: brightness(50%);
 }
 
 
