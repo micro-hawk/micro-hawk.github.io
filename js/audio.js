@@ -3,13 +3,13 @@ let icon = document.getElementById('icon');
 
 window.onload = function() {
     music.play();
-    music.volume = .1;
+    music.volume = 1;
 }
 
 icon.onclick = function (){
     if(music.paused){
         music.play();
-        music.volume = .1;
+        music.volume = 1;
         icon.src = "../assests/images/pause.png";
     } else {
         music.pause();
