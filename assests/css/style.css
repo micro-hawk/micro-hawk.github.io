@@ -731,6 +731,17 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+footer  .fab{
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin-right: 1rem ;
+    color: crimson;
+}
+
+footer .fab:visited .fab:active{
+    color: crimson;
+}
+
 
 /* responsive media query start */
 @media (max-width: 1104px) {
