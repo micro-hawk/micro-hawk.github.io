@@ -61,7 +61,7 @@ html{
 .music{
     position: fixed;
     display: flex;
-    top: 100px;
+    bottom: 350px;
     right: 30px;
     /* position: absolute; */
     /* z-index: 9999; */
