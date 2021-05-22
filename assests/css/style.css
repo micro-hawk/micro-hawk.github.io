@@ -546,16 +546,19 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 70%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 40%;
 }
 .skills-content .right .cpp::before{
-    width: 95%;
+    width: 55%;
+}
+.skills-content .right .java::before{
+    width: 60%;
 }
 .skills-content .right .mysql::before{
-    width: 70%;
+    width: 30%;
 }
 
 /* projects section styling */
@@ -735,11 +738,11 @@ footer  .fab{
     font-size: 2rem;
     padding-top: 1rem;
     margin-right: 1rem ;
-    color: crimson;
+    color: var(--primary-color);
 }
 
 footer .fab:visited .fab:active{
-    color: crimson;
+    color: var(--primary-color);
 }
 
 
@@ -869,3 +872,43 @@ footer .fab:visited .fab:active{
         line-height: 38px;
     }
 }
+
+
+
+/* contact form */
+
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 1.2rem;
+    margin-top: 1rem;
+  }
+  #status.success {
+    background-color: rgb(185, 241, 100);
+    animation: status 4s ease forwards;
+    font-weight: bold;
+    color: white;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  

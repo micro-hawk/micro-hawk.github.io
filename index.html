@@ -145,28 +145,35 @@
                     <div class="bars">
                         <div class="info">
                             <span>CSS</span>
-                            <span>60%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line css"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>JavaScript</span>
-                            <span>80%</span>
+                            <span>40%</span>
                         </div>
                         <div class="line js"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>C++</span>
-                            <span>95%</span>
+                            <span>55%</span>
                         </div>
                         <div class="line cpp"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
+                            <span>Java</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line java"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
                             <span>MySQL</span>
-                            <span>70%</span>
+                            <span>30%</span>
                         </div>
                         <div class="line mysql"></div>
                     </div>
@@ -258,24 +265,26 @@
                 </div>
                 <div class="column right">
 
-                     <form class="contact-form" action="#" method="POST">
+                     <form class="contact-form" id="contact-form" action="https://formspree.io/f/meqvabze" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="fullname" placeholder="Name">
+                                <input type="text" class="fullname" name="Name" placeholder="Name">
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email">
+                                <input class="email-input" name="email" type="email" placeholder="Email">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" placeholder="Subject">
+                            <input type="text" class="subject" name="Subject" placeholder="Subject">
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="Message.."></textarea>
+                            <textarea class="message" cols="30" rows="10" name="Message::" placeholder="Message.."></textarea>
                         </div>
                         <div class="button-area">
                             <button class="send-msg" type="submit" name="send"><i class="fas fa-share-square"></i> Send message</button>
                         </div>
+                        <div id="status"></div>
+
                     </form> 
                 </div> 
             </div>
@@ -296,6 +305,7 @@
     <script src="./js/script.js"></script>
     <!-- <script src="./js/cursor.js"></script> -->
     <script src="./js/audio.js"></script>
+    <script src="./js/contactMe.js"></script>
 
 </body>
 </html>
