@@ -12,6 +12,7 @@ html{
 }
 body {
     background-color: var(--secondary-color);
+ 
 }
 
 :root {
@@ -24,12 +25,11 @@ body {
 
 /* 
 .cursor {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border: 3px solid var(--primary-color);
     border-radius: 50%;
     position: absolute;
-
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     animation: cursorAnimation .5s alternate infinite;
@@ -38,13 +38,13 @@ body {
 .cursor::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 8px solid gray;
     opacity: .5;
-    top: -8px;
-    left: -8px;
+    top: -15px;
+    left: -15px;
 }
 
 @keyframes cursorAnimation {
@@ -65,18 +65,10 @@ body {
     position: fixed;
     display: flex;
     bottom: 350px;
-    right: 30px;
-    /* position: absolute; */
-    /* z-index: 9999; */
-    cursor: pointer;
-    /* pointer-events: none; */
+    right: 32px;
+    /* cursor: pointer; */
     animation: musicAnim .5s alternate infinite;
 }
-/* .music.show{
-    bottom: 30px;
-    opacity: 1;
-    pointer-events: auto;
-} */
 
 
 
@@ -273,11 +265,17 @@ section .title::after{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+    transition: .5s ease all;
+}
+.navbar .logo a:hover{
+    color: var(--primary-color);
 }
 .navbar .logo a span{
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
+
+
 .navbar.sticky .logo a span{
     color: #fff;
 }
@@ -344,12 +342,6 @@ section .title::after{
 .home{
     display: flex;
     background: url("../images/red-black.png") no-repeat center;
-
-
-    /* background: #0F2027;  /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -729,6 +721,10 @@ section .title::after{
     background-color: var(--secondary-color);
 }
 .contact-content {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
     color: var(--light-color);
 }
 
@@ -766,7 +762,9 @@ footer span a{
     text-decoration: none;
 }
 footer span a:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--light-color);
+    transition: all .5s ease;
 }
 
 footer  .fab{
@@ -774,8 +772,12 @@ footer  .fab{
     padding-top: 1rem;
     margin-right: 1rem ;
     color: var(--primary-color);
-}
+    transition: .4s all ease;
 
+}
+footer .fab:hover{
+    color: var(--light-color);
+}
 footer .fab:visited .fab:active{
     color: var(--primary-color);
 }
