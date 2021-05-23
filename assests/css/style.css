@@ -6,16 +6,19 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-
 }
 html{
     scroll-behavior: smooth;
+}
+body {
+    background-color: var(--secondary-color);
 }
 
 :root {
     --primary-color: crimson;
     --secondary-color : #111;
     --card-color : #222;
+    --light-color: #fff;
 }
 
 
@@ -144,6 +147,7 @@ section{
 section .title{
     position: relative;
     text-align: center;
+    color: var(--light-color);
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -157,7 +161,7 @@ section .title::before{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: var(--secondary-color);
+    background: var(--light-color);
     transform: translateX(-50%);
 }
 section .title::after{
@@ -167,7 +171,7 @@ section .title::after{
     font-size: 20px;
     color: var(--primary-color);
     padding: 0 5px;
-    background: #fff;
+    background: var(--secondary-color);
     transform: translateX(-50%);
 }
 
@@ -410,6 +414,7 @@ section .title::after{
     width: 55%;
 }
 .about .about-content .right .text{
+    color: var(--light-color);
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -418,6 +423,8 @@ section .title::after{
     color: var(--primary-color);
 }
 .about .about-content .right p{
+    color: var(--light-color);
+
     text-align: justify;
 }
 .about .about-content .right a{
@@ -435,6 +442,10 @@ section .title::after{
 .about .about-content .right a:hover{
     color: var(--primary-color);
     background: none;
+}
+
+.about {
+    background-color: var(--secondary-color);
 }
 
 /* services section styling */
@@ -517,6 +528,7 @@ section .title::after{
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
+    border-radius: 1rem;
 }
 .skills .skills-content .right .info{
     display: flex;
@@ -532,6 +544,7 @@ section .title::after{
     height: 5px;
     width: 100%;
     background: lightgrey;
+    border-radius: 2rem;
     position: relative;
 }
 .skills .skills-content .right .line::before{
@@ -540,10 +553,13 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
+    border-radius: 2rem;
+
     background: var(--primary-color);
 }
 .skills-content .right .html::before{
     width: 90%;
+
 }
 .skills-content .right .css::before{
     width: 70%;
@@ -559,6 +575,14 @@ section .title::after{
 }
 .skills-content .right .mysql::before{
     width: 30%;
+}
+
+.skills-content {
+    color: var(--light-color);
+}
+
+.skills {
+    background-color: var(--secondary-color);
 }
 
 /* projects section styling */
@@ -658,7 +682,7 @@ section .title::after{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: rgb(138, 138, 138);
 }
 .contact .right form .fields{
     display: flex;
@@ -700,6 +724,17 @@ section .title::after{
   display: flex;
   align-items: center;
 }
+
+.contact {
+    background-color: var(--secondary-color);
+}
+.contact-content {
+    color: var(--light-color);
+}
+
+
+
+
 .right form .button-area button{
   color: #fff;
   display: block;

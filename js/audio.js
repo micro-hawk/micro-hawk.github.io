@@ -1,10 +1,10 @@
 const music = document.getElementById('bgMusic');
 let icon = document.getElementById('icon');
 
-window.onload = function() {
-    music.play();
-    music.volume = 1;
-}
+// window.onload = function() {
+//     music.play();
+//     music.volume = 1;
+// }
 
 icon.onclick = function (){
     if(music.paused){
