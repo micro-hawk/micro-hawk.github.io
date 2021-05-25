@@ -16,7 +16,7 @@ body {
 }
 
 :root {
-    --primary-color: crimson;
+    --primary-color: #dc143c;
     --secondary-color : #111;
     --card-color : #222;
     --light-color: #fff;
@@ -67,6 +67,12 @@ body {
 #icon {
     width: 50px;
     cursor: pointer;
+}
+
+.animate-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .music{
     position: fixed;
@@ -314,8 +320,8 @@ section .title::after{
 
 /* menu btn styling */
 .menu-btn{
-    color: #fff;
-    font-size: 23px;
+    color: var(--primary-color);
+    font-size: 28px;
     cursor: pointer;
     display: none;
 }
@@ -356,7 +362,7 @@ section .title::after{
     display: flex;
     background: url("../images/red-black.png") no-repeat center;
     height: 100vh;
-    color: #fff;
+    color: var(--light-color);
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
@@ -737,6 +743,7 @@ section .title::after{
 
 .contact {
     background-color: var(--secondary-color);
+    padding-bottom: 1rem ;
 }
 .contact-content {
     display: flex;
@@ -771,7 +778,7 @@ section .title::after{
 /* footer section styling */
 footer{
     background: var(--secondary-color);
-    padding: 15px 23px;
+    /* padding: 15px 23px; */
     color: #fff;
     text-align: center;
 }
@@ -785,21 +792,27 @@ footer span a:hover{
     transition: all .5s ease;
 }
 
-footer  .fab{
+ .social-media .fab{
     font-size: 2rem;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     margin-right: 1rem ;
     color: var(--primary-color);
     transition: .4s all ease;
 
 }
-footer .fab:hover{
+.social-media .fab:hover{
     color: var(--light-color);
 }
-footer .fab:visited .fab:active{
+ .social-media .fab:visited .fab:active{
     color: var(--primary-color);
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
 
 /* responsive media query start */
 @media (max-width: 1104px) {
