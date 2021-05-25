@@ -20,6 +20,13 @@ body {
     --secondary-color : #111;
     --card-color : #222;
     --light-color: #fff;
+
+    --blur-background: rgba(17, 17, 17, 0.781);
+    --blur-filter:  saturate(180%) blur(15px);
+
+
+    --blur-card: rgba(34, 34, 34, 0.822);
+    --blur-card-filter : saturate(180%) blur(15px);
 }
 
 
@@ -254,7 +261,9 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
+    background: var(--blur-background);
+    backdrop-filter: var(--blur-filter);
 }
 .navbar .max-width{
     display: flex;
@@ -262,30 +271,34 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: var(--light-color);
     font-size: 35px;
     font-weight: 600;
     transition: .5s ease all;
 }
-.navbar .logo a:hover{
+/* .navbar .logo a:hover{
     color: var(--primary-color);
-}
+} */
 .navbar .logo a span{
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
 
 
-.navbar.sticky .logo a span{
-    color: #fff;
+.navbar.sticky .logo a {
+    color: var(--primary-color);
 }
+.navbar.sticky .logo a span{
+    color: var(--light-color);
+}
+
 .navbar .menu li{
     list-style: none;
     display: inline-block;
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: var(--light-color);
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -295,7 +308,7 @@ section .title::after{
     color: var(--primary-color);
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: var(--primary-color);
 }
 
 
@@ -456,7 +469,9 @@ section .title::after{
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: var(--card-color);
+    /* background: var(--card-color); */
+    background: var(--blur-card);
+    backdrop-filter: var(--blur-card-filter);
     text-align: center;
     border-radius: 1.2rem;
     padding: 35px 25px;
@@ -582,7 +597,10 @@ section .title::after{
     content: "my works";
 }
 .projects .carousel .card{
-    background: var(--card-color);
+    /* background: var(--card-color); */
+    background: var(--blur-card);
+    backdrop-filter: var(--blur-card-filter);
+
     border-radius: 1.2rem;
     padding: 25px 35px;
     text-align: center;
@@ -810,11 +828,15 @@ footer .fab:visited .fab:active{
         width: 100%;
         left: -100%;
         top: 0;
-        background: var(--secondary-color);
+        /* background: var(--secondary-color); */
+        background-color: rgba(17, 17, 17, 0.945);
+        backdrop-filter: saturate(180%) blur(15px);
+
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
     }
+
     .navbar .menu.active{
         left: 0;
     }
