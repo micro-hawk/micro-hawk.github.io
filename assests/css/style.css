@@ -320,7 +320,7 @@ section .title::after{
 
 /* menu btn styling */
 .menu-btn{
-    color: var(--primary-color);
+    color: #fff;
     font-size: 28px;
     cursor: pointer;
     display: none;
