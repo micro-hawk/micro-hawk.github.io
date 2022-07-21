@@ -29,41 +29,6 @@ body {
     --blur-card-filter : saturate(180%) blur(15px);
 }
 
-
-/* 
-.cursor {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--primary-color);
-    border-radius: 50%;
-    position: absolute;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnimation .5s alternate infinite;
-}
-
-.cursor::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 8px solid gray;
-    opacity: .5;
-    top: -15px;
-    left: -15px;
-}
-
-@keyframes cursorAnimation {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.7);
-    }
-} */
-
-
 #icon {
     width: 50px;
     cursor: pointer;
@@ -79,7 +44,6 @@ body {
     display: flex;
     bottom: 350px;
     right: 32px;
-    /* cursor: pointer; */
     animation: musicAnim .5s alternate infinite;
 }
 
@@ -94,7 +58,6 @@ body {
     height: 50px;
     border-radius: 50%;
     border: 8px solid var(--primary-color);
-    /* border: 8px solid grey; */
     opacity: .5;
     top: -8px;
     left: -8px;
@@ -109,16 +72,12 @@ body {
     }
 } 
 
-
-
-
-
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--light-color);
 }
 ::-webkit-scrollbar-thumb {
     background: #888;
@@ -181,10 +140,10 @@ section .title::after{
 }
 
 #projects a {
-    color: white;
+    color: var(--light-color);
 }
 #projects a:visited a:active {
-    color: white;
+    color: var(--light-color);
 }
 
 
@@ -202,8 +161,7 @@ section .title::after{
 .mouse {
     width: 2rem;
     height: 3rem;
-    /* background-color: #fff; */
-    border: 2px solid #fff;
+    border: 2px solid var(--light-color);
     border-radius: 3rem;
     display: flex;
 }
@@ -222,8 +180,8 @@ section .title::after{
     width: .7rem;
     height: .8rem;
     border: 2px solid transparent;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
+    border-right-color: var(--light-color);
+    border-bottom-color: var(--light-color);
     transform: rotate(45deg);
     animation: arrow-down .5s alternate infinite;
 }
@@ -267,7 +225,6 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    /* background: var(--primary-color); */
     background: var(--blur-background);
     backdrop-filter: var(--blur-filter);
 }
@@ -320,24 +277,24 @@ section .title::after{
 
 /* menu btn styling */
 .menu-btn{
-    color: #fff;
+    color: var(--light-color);
     font-size: 28px;
     cursor: pointer;
     display: none;
 }
 .scroll-up-btn{
     position: fixed;
-    height: 40px;
-    width: 35px;
+    height: 50px;
+    width: 50px;
     background: var(--primary-color);
     right: 30px;
     bottom: 10px;
     text-align: center;
-    line-height: 45px;
-    color: #fff;
+    line-height: 50px;
+    color: var(--light-color);
     z-index: 9999;
-    font-size: 30px;
-    border-radius: 1.2rem;
+    font-size: 35px;
+    border-radius: 50%;
     border-bottom-width: 2px;
     cursor: pointer;
     opacity: 0;
@@ -352,10 +309,6 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(50%);
 }
-
-
-
-
 
 /* home section styling */
 .home{
@@ -394,7 +347,7 @@ section .title::after{
 .home .home-content a{
     display: inline-block;
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -442,7 +395,7 @@ section .title::after{
 .about .about-content .right a{
     display: inline-block;
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -462,12 +415,12 @@ section .title::after{
 
 /* services section styling */
 .services, .projects{
-    color:#fff;
+    color:var(--light-color);
     background: var(--secondary-color);
 }
 .services .title::before,
 .projects .title::before{
-    background: #fff;
+    background: var(--light-color);
 }
 .services .title::after,
 .projects .title::after{
@@ -476,7 +429,6 @@ section .title::after{
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    /* background: var(--card-color); */
     background: var(--blur-card);
     backdrop-filter: var(--blur-card-filter);
     text-align: center;
@@ -501,7 +453,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
-    color: #fff;
+    color: var(--light-color);
 }
 .services .serv-content .card .text{
     font-size: 25px;
@@ -528,7 +480,7 @@ section .title::after{
 .skills .skills-content .left a{
     display: inline-block;
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
@@ -558,7 +510,7 @@ section .title::after{
 .skills .skills-content .right .line{
     height: 5px;
     width: 100%;
-    background: lightgrey;
+    background: var(--light-color);
     border-radius: 2rem;
     position: relative;
 }
@@ -588,8 +540,8 @@ section .title::after{
 .skills-content .right .java::before{
     width: 60%;
 }
-.skills-content .right .mysql::before{
-    width: 30%;
+.skills-content .right .mongodb::before{
+    width: 45%;
 }
 
 .skills-content {
@@ -605,7 +557,6 @@ section .title::after{
     content: "my works";
 }
 .projects .carousel .card{
-    /* background: var(--card-color); */
     background: var(--blur-card);
     backdrop-filter: var(--blur-card-filter);
 
@@ -643,7 +594,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .projects .carousel .card:hover img{
-    border-color: #fff;
+    border-color: var(--light-color);
 }
 .owl-dots{
     text-align: center;
@@ -760,7 +711,7 @@ section .title::after{
 
 
 .right form .button-area button{
-  color: #fff;
+  color: var(--light-color);
   display: block;
   width: 160px!important;
   height: 45px;
@@ -781,8 +732,7 @@ section .title::after{
 /* footer section styling */
 footer{
     background: var(--secondary-color);
-    /* padding: 15px 23px; */
-    color: #fff;
+    color: var(--light-color);
     text-align: center;
 }
 footer span a{
@@ -844,8 +794,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        /* background: var(--secondary-color); */
-        background-color: rgba(17, 17, 17, 0.945);
+        background-color: var(--blur-background);
         backdrop-filter: saturate(180%) blur(15px);
 
         text-align: center;
@@ -965,11 +914,11 @@ footer span a:hover{
     background-color: rgb(185, 241, 100);
     animation: status 4s ease forwards;
     font-weight: bold;
-    color: white;
+    color: var(--light-color);
   }
   #status.error {
     background-color: rgb(250, 129, 92);
-    color: white;
+    color: var(--light-color);
     animation: status 4s ease forwards;
   }
   @keyframes status {
