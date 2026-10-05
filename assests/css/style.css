@@ -20,14 +20,14 @@
     text-decoration: none;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 70px; scrollbar-gutter: stable; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; scrollbar-gutter: stable; overflow-x: clip; }
 html:has(dialog[open]) { overflow: hidden; }
 
 body {
     background: var(--secondary-color);
     color: var(--text);
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body.intro-active { overflow: hidden; }
@@ -46,7 +46,7 @@ button { font: inherit; }
 
 .max-width { max-width: 1300px; padding: 0 80px; margin: auto; }
 
-section { padding: 110px 0 100px; position: relative; }
+section { padding: 110px 0 100px; position: relative; overflow-x: clip; }
 
 /* ---------- intro ---------- */
 .intro {
@@ -428,6 +428,9 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: .88em; color: var
     transform: scale(calc(1.45 - var(--zoom, 1) * .45));
     opacity: calc(.15 + var(--zoom, 1) * .85);
     letter-spacing: calc((1 - var(--zoom, 1)) * .18em);
+}
+@media (max-width: 690px) {
+    .scroll-fx section .title { transform: scale(calc(1.15 - var(--zoom, 1) * .15)); letter-spacing: calc((1 - var(--zoom, 1)) * .06em); }
 }
 .scroll-fx [data-scroll-read] .w { color: rgba(169, 169, 169, .22); transition: color .35s ease; }
 .scroll-fx [data-scroll-read] .w.lit { color: var(--text); }
