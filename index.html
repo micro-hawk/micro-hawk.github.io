@@ -315,6 +315,14 @@
             <h2 class="title">Projects</h2>
             <div class="carousel" id="carousel">
                 <div class="carousel-track">
+                    <a class="card" data-case="job-agent" href="https://github.com/micro-hawk/job-agent" target="_blank" rel="noopener">
+                        <div class="card-media"><img src="assests/images/project-job-agent.png" alt="Job Agent dashboard screenshot" loading="lazy"></div>
+                        <div class="card-body">
+                            <div class="text"><i class="fas fa-robot"></i> Job Agent</div>
+                            <p>Open-source job-search autopilot: finds backend roles on company career boards, scores each one against my resume with Claude, applies to strong matches and tracks it all in a local dashboard.</p>
+                            <div class="tags"><span>Python</span><span>Claude</span><span>Playwright</span><span>SQLite</span></div>
+                        </div>
+                    </a>
                     <a class="card" data-case="webisssh" href="https://github.com/micro-hawk/webisssh" target="_blank" rel="noopener">
                         <div class="card-media code-art" aria-hidden="true">
                             <pre><span class="k">@RestController</span>
@@ -384,6 +392,32 @@ POST /leaves    <span class="ok">201</span></pre>
             </div>
             <p class="case-hint"><i class="fas fa-hand-pointer"></i> Tap a project for the full story</p>
         </div>
+
+        <template id="case-job-agent">
+            <p class="case-kicker">AI agent · open source</p>
+            <h3>Job Agent</h3>
+            <div class="case-grid">
+                <div class="case-block">
+                    <h4><i class="fas fa-bug"></i> Problem</h4>
+                    <p>A job search means checking dozens of career boards every day, reading every posting to judge fit, filling the same forms again and again, and tailoring a resume for each one.</p>
+                </div>
+                <div class="case-block">
+                    <h4><i class="fas fa-hammer"></i> What I built</h4>
+                    <ul>
+                        <li>Discovery from Greenhouse, Lever and Ashby boards plus job-alert emails, filtered by title, market, experience and salary.</li>
+                        <li>Two-stage Claude scoring (a cheap Haiku pre-score, then Sonnet with reasons and gaps) under a daily LLM budget.</li>
+                        <li>Form filling that answers only from my profile and resume; anything it can't answer truthfully waits for me.</li>
+                        <li>An ATS scorer (Claude or a free local parser) and a LaTeX resume builder with live PDF preview.</li>
+                    </ul>
+                </div>
+                <div class="case-block">
+                    <h4><i class="fas fa-bolt"></i> Outcome</h4>
+                    <p>One local dashboard runs the whole search, with safety rails built in: it stops on any CAPTCHA, never automates LinkedIn, caps applications per day and has a kill switch. Covered by 448 pytest tests.</p>
+                </div>
+            </div>
+            <div class="tags"><span>Python</span><span>Claude</span><span>Playwright</span><span>SQLite</span><span>LaTeX</span></div>
+            <div class="case-links"><a class="btn" href="https://github.com/micro-hawk/job-agent" target="_blank" rel="noopener"><i class="fab fa-github"></i> View code</a></div>
+        </template>
 
         <template id="case-webisssh">
             <p class="case-kicker">Developer tool</p>
